@@ -61,7 +61,7 @@ def run_test_harness():
                                           target_size=(200, 200))
 
     history = model.fit(train_it, steps_per_epoch=len(train_it),
-                        validation_data=test_it, validation_steps=len(test_it), epochs=10, verbose=1)
+                        validation_data=test_it, validation_steps=len(test_it), epochs=5, verbose=1)
     _, acc = model.evaluate(test_it, steps=len(test_it), verbose=1)
     print('> %.3f' % (acc * 100.0))
     summarize_diagnostics(history)
