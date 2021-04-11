@@ -1,0 +1,26 @@
+<annotation>
+	<folder>NonMedicalMask</folder>
+	<filename>Pic_1022.jpg</filename>
+	<path>C:\Users\Dehmane\PycharmProjects\Real-time-object-detection\Dataset\Images\Train\NonMedicalMask\Pic_1022.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>400</width>
+		<height>400</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>NonMedicalMask</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>78</xmin>
+			<ymin>218</ymin>
+			<xmax>113</xmax>
+			<ymax>246</ymax>
+		</bndbox>
+	</object>
+</annotation>
