@@ -11,14 +11,15 @@ from tensorflow.keras.preprocessing.image import ImageDataGenerator
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2"
 
 
+# Tranfer learning technic, using a pre-trained model
 def define_model():
-    model = VGG16(include_top=False, input_shape=(200, 200, 3))
+    model = VGG16(include_top=False, input_shape=(200, 200, 3)) # Load VGG16 pretrained model
     for layer in model.layers:
-        layer.trainable = False
-    flat1 = Flatten()(model.layers[-1].output)
-    class1 = Dense(128, activation='relu', kernel_initializer='he_uniform')(flat1)
-    output = Dense(3, activation='softmax')(class1)
-    model = Model(inputs=model.inputs, outputs=output)
+        layer.trainable = False # Desactivate the training for all layers 
+    flat1 = Flatten()(model.layers[-1].output) # Add new layer
+    class1 = Dense(128, activation='relu', kernel_initializer='he_uniform')(flat1) # Add new layer
+    output = Dense(3, activation='softmax')(class1) # Add new layer
+    model = Model(inputs=model.inputs, outputs=output) # define the new model containing VGG16 + flat1 layer + class1 layer + output layer
     model.compile(optimizer='Adam', loss='categorical_crossentropy', metrics=['accuracy'])
     return model
 
