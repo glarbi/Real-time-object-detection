@@ -1,0 +1,26 @@
+<annotation>
+	<folder>FFPMask</folder>
+	<filename>Pic_1132.jpg</filename>
+	<path>C:\Users\Dehmane\PycharmProjects\Real-time-object-detection\Dataset\Images\Train\FFPMask\Pic_1132.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>400</width>
+		<height>400</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>FFPMask</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>83</xmin>
+			<ymin>109</ymin>
+			<xmax>208</xmax>
+			<ymax>204</ymax>
+		</bndbox>
+	</object>
+</annotation>

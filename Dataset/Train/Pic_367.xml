@@ -1,0 +1,26 @@
+<annotation>
+	<folder>MedicalMask</folder>
+	<filename>Pic_367.jpg</filename>
+	<path>C:\Users\Dehmane\PycharmProjects\Real-time-object-detection\Dataset\Images\Train\MedicalMask\Pic_367.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>400</width>
+		<height>400</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>SurgicalMask</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1</xmin>
+			<ymin>204</ymin>
+			<xmax>53</xmax>
+			<ymax>246</ymax>
+		</bndbox>
+	</object>
+</annotation>
