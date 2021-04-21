@@ -1,6 +1,5 @@
 import torch
 import torch.nn as nn
-from PIL import Image
 
 architecture = [
     (32, 3, 1),            # Conv2d (32filters , kernelSize 3, Stride 1)

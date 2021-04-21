@@ -7,7 +7,7 @@ In this project, we focus on the problem of computation time as well as the elim
 YOLOv3 (You Only Look Once, Version 3) is a real-time object detection algorithm that identifies specific objects in videos, live feeds, or images. Since it prooved its efficiency Yolo architecture and algorithm is used in this project.
 
 ## Research Paper
-Link : [YOLOv3: An Incremental Improvement -Joseph Redmon, Ali Farhadi](https://www.google.com "Yolov3")
+Link : [YOLOv3: An Incremental Improvement -Joseph Redmon, Ali Farhadi](https://pjreddie.com/media/files/papers/YOLOv3.pdf "Yolov3")
 
 
 
