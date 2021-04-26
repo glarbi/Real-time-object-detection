@@ -16,10 +16,14 @@ Link : [YOLOv3: An Incremental Improvement -Joseph Redmon, Ali Farhadi](https://
 
 The idea of using tuplets, lists, strings is inspired by [Persson](https://www.youtube.com/channel/UCkzW5JSFwvKRjXABI-UTAkQ "Persson")'s implementation under [MIT license](https://en.wikipedia.org/wiki/MIT_License "MIT license").
 
+## Requirements
+> Pytorch
+> Albumentations
+
+
 ## Datasets
 ...
 
 ## Results
 ...
 
-2021-04-23 01:12:55 Friday
