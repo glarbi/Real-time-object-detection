@@ -22,8 +22,7 @@ The idea of using tuplets, lists, strings is inspired by [Persson](https://www.y
 
 
 ## Datasets
-...
+currently being trained on Pascal_VOC
 
 ## Results
-...
-
+Not yet
