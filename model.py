@@ -137,15 +137,3 @@ class Yolo(nn.Module):  # our model class
                     layers.append(nn.Upsample(scale_factor=2), )
                     in_channels = in_channels * 3  # we should concatenate just after the Upsample
         return layers
-
-
-##### Testing the model ####
-num_classes = 20
-IMAGE_SIZE = 416
-model = Yolo(num_classes=num_classes)
-x = torch.randn((2, 3, IMAGE_SIZE, IMAGE_SIZE))
-out = model(x)
-assert model(x)[0].shape == (2, 3, IMAGE_SIZE // 32, IMAGE_SIZE // 32, num_classes + 5)
-assert model(x)[1].shape == (2, 3, IMAGE_SIZE // 16, IMAGE_SIZE // 16, num_classes + 5)
-assert model(x)[2].shape == (2, 3, IMAGE_SIZE // 8, IMAGE_SIZE // 8, num_classes + 5)
-print("Success!")
