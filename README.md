@@ -33,9 +33,9 @@ The idea of using tuplets, lists, strings is inspired by [Persson](https://www.y
 ## Results
 | Dataset  | Pascal VOC  |  COCO |  ImageNet |
 | ------------ | :------------: | :------------: | :------------: |
-| Trained Model  | [Download](https://drive.google.com/file/d/1-15dU1YoPJlet5d9TRi88bhfgj_iCZQN/view?usp=sharing "Pascal")  | N/A  |  N/A |
-| Class Accuracy  | 89.45 %  | N/A  |  N/A |
-| Object Accuracy  |  76.12 % | N/A  | N/A  |
-| No Object Accuracy  | 99.02 %  | N/A  | N/A  |
-| mAP / 50 IoU  | 60.66  | N/A  | N/A  |
+| Trained Model  | [Download](https://drive.google.com/file/d/1-15dU1YoPJlet5d9TRi88bhfgj_iCZQN/view?usp=sharing "Pascal")  | (Still Training)  |  N/A |
+| Class Accuracy  | 89.45 %  | # 71.24 %  |  N/A |
+| Object Accuracy  |  76.12 % | # 51.99 %  | N/A  |
+| No Object Accuracy  | 99.02 %  | # 98.96 %  | N/A  |
+| mAP / 50 IoU  | 60.66  | # 37.32  | N/A  |
 
