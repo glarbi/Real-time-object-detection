@@ -28,14 +28,14 @@ The idea of using tuplets, lists, strings is inspired by [Persson](https://www.y
 - Matplotlib
 - Opencv
 - Scikit-Learn
-- SciPy
 
 ## Results
 | Dataset  | Pascal VOC  |  COCO |  ImageNet |
 | ------------ | :------------: | :------------: | :------------: |
-| Trained Model  | [Download](https://drive.google.com/file/d/1-15dU1YoPJlet5d9TRi88bhfgj_iCZQN/view?usp=sharing "Pascal")  | N/A  |  N/A |
-| Class Accuracy  | 89.45 %  | N/A  |  N/A |
-| Object Accuracy  |  76.12 % | N/A  | N/A  |
-| No Object Accuracy  | 99.02 %  | N/A  | N/A  |
-| mAP / 50 IoU  | 60.66  | N/A  | N/A  |
-
+| Trained Model  | [Initial Model](https://drive.google.com/file/d/1gp4xWn4AKP_JgcDHfXXHq8MXwNOFY0Y3/view?usp=sharing)  |  N/A |  N/A |
+| Class Accuracy  | 75.13 %  |  N/A |  N/A |
+| Object Accuracy  |  29.83 % |  N/A |  N/A |
+| No Object Accuracy  | 99.68 %  |  N/A |  N/A |
+| mAP / 50 IoU  | 39.36  |  N/A |  N/A |
+| FPS  | 25.54  |  N/A |  N/A |
+| Detection Demo Video | [Download](https://drive.google.com/file/d/1xvqD05SDDRWTaiwQgorbg4rx22niLw3m/view?usp=drive_web)  |  N/A |  N/A |

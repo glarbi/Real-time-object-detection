@@ -24,20 +24,19 @@ class Yololoss(nn.Module):
 
         # Object loss
         anchors = anchors.reshape(1, 3, 1, 1, 2)
-        box_predictions = torch.cat([self.sigmoid(predictions[..., 1:3]), torch.exp(predictions[..., 3:5]) * anchors],
-                                    dim=-1)
+        box_predictions = torch.cat([self.sigmoid(predictions[..., 1:3]), torch.exp(predictions[..., 3:5]) * anchors],dim=-1)
         ious = intersection_over_union(box_predictions[obj], target[..., 1:5][obj]).detach()
         object_loss = self.mean_square_error(self.sigmoid(predictions[..., 0:1][obj]), ious * target[..., 0:1][obj])
 
         # Box coordinates loss
         predictions[..., 1:3] = self.sigmoid(predictions[..., 1:3])
-        target[..., 3:5] = torch.log(1e-16 + target[..., 3:5] / anchors)
+        target[..., 3:5] = torch.log((1e-16 + target[..., 3:5] / anchors))
         box_loss = self.mean_square_error(predictions[..., 1:5][obj], target[..., 1:5][obj])
 
         # Class loss
         class_loss = self.cross_entropy((predictions[..., 5:][obj]), (target[..., 5][obj].long()))
 
-        return (self.var_box * box_loss
-                + self.var_Obj * object_loss
-                + self.var_noObject * no_object_loss
-                + self.var_class * class_loss)
+        return (self.var_box * box_loss +
+                self.var_Obj * object_loss +
+                self.var_noObject * no_object_loss +
+                self.var_class * class_loss)
