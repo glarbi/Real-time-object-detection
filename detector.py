@@ -1,7 +1,7 @@
-
 import cv2
 import torch
 import config
+import random
 import numpy as np
 from model import Yolo
 from PIL import Image
@@ -17,11 +17,7 @@ from utils import (
     cells_to_bboxes
 )
 
-def draw_box(frame, aff, boxes):
-
-    cmap = plt.get_cmap("tab20b")
-    class_labels = config.COCO_LABELS if config.DATASET=='COCO' else config.PASCAL_CLASSES
-    colors = [cmap(i) for i in np.linspace(0, 1, len(class_labels))]
+def draw_box(frame, aff, boxes, colors):
     height, width, _ = aff.shape
     for box in boxes:
         assert len(box) == 6, "box should contain class pred, confidence, x, y, width, height"
@@ -41,11 +37,10 @@ def draw_box(frame, aff, boxes):
         p4 = (p1[0] + text_size[0] + 4, p1[1])
         cv2.rectangle(aff, p3, p4, color, -1)
         cv2.putText(aff, label, p1, cv2.FONT_HERSHEY_SIMPLEX, 1, [225, 255, 255], 1)
-    out.write(aff)
     
 
     
-def get_bboxes(model, frame, aff, thresh, iou_thresh, anchors):
+def get_bboxes(model, frame, aff, thresh, iou_thresh, anchors, colors):
     with torch.no_grad():
         out = model(frame[None, ...])
         bboxes = [[] for _ in range(1)]
@@ -62,7 +57,7 @@ def get_bboxes(model, frame, aff, thresh, iou_thresh, anchors):
         nms_boxes = non_max_suppression(
             bboxes[i], iou_threshold=iou_thresh, threshold=thresh, box_format="midpoint",
         )
-        if nms_boxes : draw_box(frame, aff, nms_boxes)
+        if nms_boxes : draw_box(frame, aff, nms_boxes, colors)
 
 print('Loading network...')
 model = Yolo(num_classes=config.NUM_CLASSES).to(config.DEVICE)
@@ -80,7 +75,8 @@ fps = cap.get(cv2.CAP_PROP_FPS)
 fourcc = cv2.VideoWriter_fourcc(*'mp4v')
 out = cv2.VideoWriter(output_path, fourcc, fps, (width, height))
 read_frames = 0
-
+class_labels = config.COCO_LABELS if config.DATASET=='COCO' else config.PASCAL_CLASSES
+colors = [(random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)) for i in range(len(class_labels))]
 
 start_time = datetime.now()
 print('Detecting...')
@@ -112,7 +108,8 @@ while cap.isOpened():
     scaled_anchors = torch.tensor(anchors) / (
         1 / torch.tensor(S).unsqueeze(1).unsqueeze(1).repeat(1, 3, 2)
     )
-    get_bboxes(model, frame, aff, config.CONF_THRESHOLD, config.MAP_IOU_THRESH, scaled_anchors)
+    get_bboxes(model, frame, aff, config.CONF_THRESHOLD, config.MAP_IOU_THRESH, scaled_anchors, colors)
+    out.write(aff)
 
 end_time = datetime.now()
 print('Detection finished in %s' % (end_time - start_time))
