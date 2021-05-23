@@ -3,12 +3,12 @@ import torch
 import albumentations as A
 from albumentations.pytorch import ToTensorV2
 
-DATASET = '/home/l.guezouli/madji/Workspace/datasets/PASCAL_VOC/'
+DATASET = '/home/l.guezouli/madji/Workspace/datasets/COCO/'
 DEVICE = "cuda:0" if torch.cuda.is_available() else "cpu"
 NUM_WORKERS = 4
-BATCH_SIZE = 32
+BATCH_SIZE = 16
 IMAGE_SIZE = 416
-NUM_CLASSES = 20
+NUM_CLASSES = 80
 LEARNING_RATE = 3e-4
 WEIGHT_DECAY = 1e-4
 NUM_EPOCHS = 100
@@ -19,7 +19,7 @@ GRID_SIZE = [IMAGE_SIZE // 32, IMAGE_SIZE // 16, IMAGE_SIZE // 8]
 PIN_MEMORY = True
 LOAD_MODEL = True
 SAVE_MODEL = True
-CHECKPOINT_FILE = "checkpoint_pascal.tar"
+CHECKPOINT_FILE = "checkpoint_coco.tar"
 IMG_DIR = DATASET + "/images/"
 LABEL_DIR = DATASET + "/labels/"
 
