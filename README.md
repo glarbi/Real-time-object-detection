@@ -34,9 +34,9 @@ The idea of using tuplets, lists, strings is inspired by [Persson](https://www.y
 | ------------ | :------------: | :------------: | :------------: |
 | Trained Model  | [Download](https://drive.google.com/file/d/1vYFwiRIN7qhQgPcV5A5fNcShExUS7oFz/view?usp=sharing)  |  Soon.. |  N/A |
 | Demo Video / 0.87 Conf | [Watch](https://drive.google.com/file/d/1E6HDOAlPVNL1hCpzuNA1U-CkrlYQYc7B/view?usp=sharing)  |  Soon.. |  N/A |
-| Class Accuracy  | 88.07 %  |  57.05 % |  N/A |
-| Object Accuracy  |  67.51 % |  22.02 % |  N/A |
-| No Object Accuracy  | 99.66 %  |  99.59 % |  N/A |
+| Class Accuracy  | 88.07 %  |  74.12 % |  N/A |
+| Object Accuracy  |  67.51 % |  40.01 % |  N/A |
+| No Object Accuracy  | 99.66 %  |  99.49 % |  N/A |
 | mAP / 50 IoU  | 60.37  |  Soon.. |  N/A |
 | FPS  | 26.16 (Collab GPU)  |  Soon.. |  N/A |
 
