@@ -30,13 +30,13 @@ The idea of using tuplets, lists, strings is inspired by [Persson](https://www.y
 - Scikit-Learn
 
 ## Results
-| Dataset  | Pascal VOC  |  COCO |  ImageNet |
-| ------------ | :------------: | :------------: | :------------: |
-| Trained Model  | [Download](https://drive.google.com/file/d/1vYFwiRIN7qhQgPcV5A5fNcShExUS7oFz/view?usp=sharing)  |  Soon.. |  N/A |
-| Demo Video / 0.87 Conf | [Watch](https://drive.google.com/file/d/1E6HDOAlPVNL1hCpzuNA1U-CkrlYQYc7B/view?usp=sharing)  |  Soon.. |  N/A |
-| Class Accuracy  | 88.07 %  |  74.12 % |  N/A |
-| Object Accuracy  |  67.51 % |  40.01 % |  N/A |
-| No Object Accuracy  | 99.66 %  |  99.49 % |  N/A |
-| mAP / 50 IoU  | 60.37  |  Soon.. |  N/A |
-| FPS  | 26.16 (Collab GPU)  |  Soon.. |  N/A |
+| Dataset  | Pascal VOC  |  COCO |
+| ------------ | :------------: | :------------: |
+| Trained Model  | [Download](https://drive.google.com/file/d/1vYFwiRIN7qhQgPcV5A5fNcShExUS7oFz/view?usp=sharing)  |  [Download](https://drive.google.com/file/d/1bLBbahxRvmw8HcbMJ2OaBjtULSbQm9gW/view?usp=sharing) |
+| Demo Video / 0.87 Conf | [Watch](https://drive.google.com/file/d/1E6HDOAlPVNL1hCpzuNA1U-CkrlYQYc7B/view?usp=sharing)  |  [Watch](https://drive.google.com/file/d/1zkoUaeKSgLFcryWNxGxJCwvsYQdESRDs/view?usp=sharing) |
+| Class Accuracy  | 88.07 %  |  75.13 % |
+| Object Accuracy  |  67.51 % |  57.06 % |
+| No Object Accuracy  | 99.66 %  |  98.99% |
+| mAP / 50 IoU  | 60.37  |  35.61 |
+| FPS  | 26.16 (Collab GPU)  |  25.86 (Collab GPU) |
 
